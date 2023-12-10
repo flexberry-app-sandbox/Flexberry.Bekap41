@@ -1,0 +1,252 @@
+﻿{
+  "name": "IISBekap4ЗаказПост",
+  "modelName": "i-i-s-bekap4-заказ-пост",
+  "className": "ЗаказПост",
+  "nameSpace": "IIS.Bekap4",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаНачала",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаОкончания",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "состОтгрузки",
+      "type": "i-i-s-bekap4-сост-поставок",
+      "flexberryType": "СостПоставок",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "состояниеОплаты",
+      "type": "i-i-s-bekap4-сост-оплаты",
+      "flexberryType": "СостОплаты",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "суммаВклНДС",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "суммаДокумента",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "организации",
+      "relatedTo": "i-i-s-bekap4-организации",
+      "inverse": "заказПост"
+    },
+    {
+      "name": "заказ",
+      "relatedTo": "i-i-s-bekap4-т-ч-заказ",
+      "inverse": "заказПост"
+    },
+    {
+      "name": "склады",
+      "relatedTo": "i-i-s-bekap4-склады",
+      "inverse": "заказПост"
+    },
+    {
+      "name": "контрагенты",
+      "relatedTo": "i-i-s-bekap4-контрагенты",
+      "inverse": "заказПост"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ЗаказПостE",
+      "modelName": "i-i-s-bekap4-заказ-пост",
+      "attrs": [
+        {
+          "name": "датаОкончания",
+          "caption": "Дата окончания",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "суммаДокумента",
+          "caption": "Сумма документа",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "состояниеОплаты",
+          "caption": "Состояние оплаты",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ОрганизацииE",
+          "caption": "Организации",
+          "name": "организации",
+          "relatedTo": "i-i-s-bekap4-организации",
+          "inverse": null
+        },
+        {
+          "projectionName": "КонтрагентыE",
+          "caption": "Контрагенты",
+          "name": "контрагенты",
+          "relatedTo": "i-i-s-bekap4-контрагенты",
+          "inverse": null
+        },
+        {
+          "projectionName": "СкладыE",
+          "caption": "Склады",
+          "name": "склады",
+          "relatedTo": "i-i-s-bekap4-склады",
+          "inverse": null
+        },
+        {
+          "projectionName": "ТЧЗаказE",
+          "caption": "Заказ",
+          "name": "заказ",
+          "relatedTo": "i-i-s-bekap4-т-ч-заказ",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ЗаказПостL",
+      "modelName": "i-i-s-bekap4-заказ-пост",
+      "attrs": [
+        {
+          "name": "датаОкончания",
+          "caption": "Дата окончания",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "суммаДокумента",
+          "caption": "Сумма документа",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "состояниеОплаты",
+          "caption": "Состояние оплаты",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ЗаказПоставщикуE",
+      "modelName": "i-i-s-bekap4-заказ-пост",
+      "attrs": [
+        {
+          "name": "датаОкончания",
+          "caption": "Дата окончания",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "суммаДокумента",
+          "caption": "Сумма документа",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ТЧЗаказE",
+          "caption": "Заказ",
+          "name": "заказ",
+          "relatedTo": "i-i-s-bekap4-т-ч-заказ",
+          "inverse": null
+        },
+        {
+          "projectionName": "СкладыE",
+          "caption": "Склады",
+          "name": "склады",
+          "relatedTo": "i-i-s-bekap4-склады",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ЗаказПоставщикуL",
+      "modelName": "i-i-s-bekap4-заказ-пост",
+      "attrs": [
+        {
+          "name": "датаОкончания",
+          "caption": "Дата окончания",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "суммаДокумента",
+          "caption": "Сумма документа",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

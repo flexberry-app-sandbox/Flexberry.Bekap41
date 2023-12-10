@@ -1,0 +1,36 @@
+﻿{
+  "applicationCaption": "Bekap4",
+  "applicationTitle": "Bekap4",
+  "items": [
+    {
+      "link": null,
+      "menuName": "bekap4",
+      "caption": "Bekap4",
+      "title": "Bekap4",
+      "children": [
+        {
+          "link": "i-i-s-bekap4-заказ-пост-l",
+          "menuName": null,
+          "caption": "Заказ пост",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-bekap4-отчет-о-закупках-l",
+          "menuName": null,
+          "caption": "Отчет о закупках",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-bekap4-план-закупок-l",
+          "menuName": null,
+          "caption": "План закупок",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

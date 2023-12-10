@@ -1,0 +1,55 @@
+﻿{
+  "name": "IISBekap4ЕдиницыИзмер",
+  "modelName": "i-i-s-bekap4-единицы-измер",
+  "className": "ЕдиницыИзмер",
+  "nameSpace": "IIS.Bekap4",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "единицаИзмер",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "тЧЗаказ",
+      "relatedTo": "i-i-s-bekap4-т-ч-заказ",
+      "inverse": "единицыИзмер"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ЕдиницыИзмерE",
+      "modelName": "i-i-s-bekap4-единицы-измер",
+      "attrs": [],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ЕдиницыИзмеренияE",
+      "modelName": "i-i-s-bekap4-единицы-измер",
+      "attrs": [],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ЕдиницыИзмеренияL",
+      "modelName": "i-i-s-bekap4-единицы-измер",
+      "attrs": [],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

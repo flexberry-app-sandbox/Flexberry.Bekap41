@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Отчет о закупках",
+  "name": "IISBekap4ОтчетОЗакупкахE",
+  "className": "ОтчетОЗакупкахE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-bekap4-отчет-о-закупках",
+      "modelProjection": "ОтчетОЗакупкахE"
+    }
+  ]
+}

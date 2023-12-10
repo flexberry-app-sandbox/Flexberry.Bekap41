@@ -1,0 +1,68 @@
+﻿{
+  "name": "IISBekap4ПланЗакупок",
+  "modelName": "i-i-s-bekap4-план-закупок",
+  "className": "ПланЗакупок",
+  "nameSpace": "IIS.Bekap4",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаНачала",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "план",
+      "relatedTo": "i-i-s-bekap4-план",
+      "inverse": "планЗакупок"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ПланЗакупокE",
+      "modelName": "i-i-s-bekap4-план-закупок",
+      "attrs": [
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ПланE",
+          "caption": "План",
+          "name": "план",
+          "relatedTo": "i-i-s-bekap4-план",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ПланЗакупокL",
+      "modelName": "i-i-s-bekap4-план-закупок",
+      "attrs": [
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

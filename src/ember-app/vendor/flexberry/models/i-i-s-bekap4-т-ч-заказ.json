@@ -1,0 +1,119 @@
+﻿{
+  "name": "IISBekap4ТЧЗаказ",
+  "modelName": "i-i-s-bekap4-т-ч-заказ",
+  "className": "ТЧЗаказ",
+  "nameSpace": "IIS.Bekap4",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "количество",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "сумма",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "суммаНДС",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "цена",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "этоУслуга",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "заказПост",
+      "relatedTo": "i-i-s-bekap4-заказ-пост",
+      "inverse": "заказ"
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "номенклатура",
+      "relatedTo": "i-i-s-bekap4-номенклатура",
+      "inverse": "тЧЗаказ"
+    },
+    {
+      "name": "единицыИзмер",
+      "relatedTo": "i-i-s-bekap4-единицы-измер",
+      "inverse": "тЧЗаказ"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ТЧЗаказE",
+      "modelName": "i-i-s-bekap4-т-ч-заказ",
+      "attrs": [
+        {
+          "name": "цена",
+          "caption": "Цена",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "этоУслуга",
+          "caption": "Это услуга",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "суммаНДС",
+          "caption": "Сумма НДС",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "количество",
+          "caption": "Количество",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

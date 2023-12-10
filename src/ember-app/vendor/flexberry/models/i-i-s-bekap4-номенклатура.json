@@ -1,0 +1,62 @@
+﻿{
+  "name": "IISBekap4Номенклатура",
+  "modelName": "i-i-s-bekap4-номенклатура",
+  "className": "Номенклатура",
+  "nameSpace": "IIS.Bekap4",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "номенклатура",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "тЧЗаказ",
+      "relatedTo": "i-i-s-bekap4-т-ч-заказ",
+      "inverse": "номенклатура"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "НоменклатураE",
+      "modelName": "i-i-s-bekap4-номенклатура",
+      "attrs": [
+        {
+          "name": "номенклатура",
+          "caption": "Номенклатура",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "НоменклатураL",
+      "modelName": "i-i-s-bekap4-номенклатура",
+      "attrs": [
+        {
+          "name": "номенклатура",
+          "caption": "Номенклатура",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

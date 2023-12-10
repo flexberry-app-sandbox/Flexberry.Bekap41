@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Заказ пост",
+  "name": "IISBekap4ЗаказПостE",
+  "className": "ЗаказПостE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-bekap4-заказ-пост",
+      "modelProjection": "ЗаказПостE"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+﻿{
+  "name": "IISBekap4Организации",
+  "modelName": "i-i-s-bekap4-организации",
+  "className": "Организации",
+  "nameSpace": "IIS.Bekap4",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "организация",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "заказПост",
+      "relatedTo": "i-i-s-bekap4-заказ-пост",
+      "inverse": "организации"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ОрганизацииE",
+      "modelName": "i-i-s-bekap4-организации",
+      "attrs": [
+        {
+          "name": "организация",
+          "caption": "Организация",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

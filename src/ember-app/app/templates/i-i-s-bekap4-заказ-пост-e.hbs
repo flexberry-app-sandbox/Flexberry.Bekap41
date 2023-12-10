@@ -1,0 +1,125 @@
+<h3 class="ui header">{{t "forms.i-i-s-bekap4-заказ-пост-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-bekap4-заказ-пост-e.датаОкончания-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаОкончания
+      class=(if (v-get validationModel "датаОкончания" "isInvalid") "error")
+      data-test-i-i-s-bekap4-заказ-пост-e-датаОкончания=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаОкончания" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.суммаДокумента
+      class=(if (v-get validationModel "суммаДокумента" "isInvalid") "error")
+      label=(t "forms.i-i-s-bekap4-заказ-пост-e.суммаДокумента-caption")
+      data-test-i-i-s-bekap4-заказ-пост-e-суммаДокумента=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "суммаДокумента" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-bekap4-заказ-пост-e.датаНачала-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаНачала
+      class=(if (v-get validationModel "датаНачала" "isInvalid") "error")
+      data-test-i-i-s-bekap4-заказ-пост-e-датаНачала=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаНачала" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-bekap4-заказ-пост-e-состояниеОплаты="true">
+    <label>{{t "forms.i-i-s-bekap4-заказ-пост-e.состояниеОплаты-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-bekap4-сост-оплаты")
+      value=model.состояниеОплаты
+      class=(if (v-get validationModel "состояниеОплаты" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "состояниеОплаты" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-bekap4-заказ-пост-e.организации-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="организацииGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.организации
+      content=model.организации
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "организации" "isInvalid") "error")
+      data-test-i-i-s-bekap4-заказ-пост-e-организации=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "организации" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-bekap4-заказ-пост-e.контрагенты-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="контрагентыGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.контрагенты
+      content=model.контрагенты
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "контрагенты" "isInvalid") "error")
+      data-test-i-i-s-bekap4-заказ-пост-e-контрагенты=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "контрагенты" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-bekap4-заказ-пост-e.склады-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="складыGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.склады
+      content=model.склады
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "склады" "isInvalid") "error")
+      data-test-i-i-s-bekap4-заказ-пост-e-склады=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "склады" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-bekap4-заказ-пост-e.заказ-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="заказGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.заказ
+      content=model.заказ
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "заказ" "isInvalid") "error")
+      data-test-i-i-s-bekap4-заказ-пост-e-заказ=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "заказ" "message")}}
+  </div>
+</form>

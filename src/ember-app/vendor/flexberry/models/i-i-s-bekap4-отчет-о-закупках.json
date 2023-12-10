@@ -1,0 +1,30 @@
+﻿{
+  "name": "IISBekap4ОтчетОЗакупках",
+  "modelName": "i-i-s-bekap4-отчет-о-закупках",
+  "className": "ОтчетОЗакупках",
+  "nameSpace": "IIS.Bekap4",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ОтчетОЗакупкахE",
+      "modelName": "i-i-s-bekap4-отчет-о-закупках",
+      "attrs": [],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ОтчетОЗакупкахL",
+      "modelName": "i-i-s-bekap4-отчет-о-закупках",
+      "attrs": [],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

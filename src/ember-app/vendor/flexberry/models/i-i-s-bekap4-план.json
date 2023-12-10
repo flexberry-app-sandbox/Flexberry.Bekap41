@@ -1,0 +1,63 @@
+﻿{
+  "name": "IISBekap4План",
+  "modelName": "i-i-s-bekap4-план",
+  "className": "План",
+  "nameSpace": "IIS.Bekap4",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "количество",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "этоУслуга",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "планЗакупок",
+      "relatedTo": "i-i-s-bekap4-план-закупок",
+      "inverse": "план"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ПланE",
+      "modelName": "i-i-s-bekap4-план",
+      "attrs": [
+        {
+          "name": "этоУслуга",
+          "caption": "Это услуга",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "количество",
+          "caption": "Количество",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

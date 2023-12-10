@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-bekap4-заказ-пост-e",
+  "editForm": "i-i-s-bekap4-заказ-пост-e",
+  "external": false,
+  "caption": "Заказ пост",
+  "name": "IISBekap4ЗаказПостL",
+  "className": "ЗаказПостL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-bekap4-заказ-пост",
+      "modelProjection": "ЗаказПостL"
+    }
+  ]
+}

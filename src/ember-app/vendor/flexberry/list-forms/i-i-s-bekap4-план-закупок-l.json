@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-bekap4-план-закупок-e",
+  "editForm": "i-i-s-bekap4-план-закупок-e",
+  "external": false,
+  "caption": "План закупок",
+  "name": "IISBekap4ПланЗакупокL",
+  "className": "ПланЗакупокL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-bekap4-план-закупок",
+      "modelProjection": "ПланЗакупокL"
+    }
+  ]
+}

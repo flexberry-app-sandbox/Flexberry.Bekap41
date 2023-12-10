@@ -1,0 +1,62 @@
+﻿{
+  "name": "IISBekap4Контрагенты",
+  "modelName": "i-i-s-bekap4-контрагенты",
+  "className": "Контрагенты",
+  "nameSpace": "IIS.Bekap4",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "контрагент",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "заказПост",
+      "relatedTo": "i-i-s-bekap4-заказ-пост",
+      "inverse": "контрагенты"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "КонтрагентыE",
+      "modelName": "i-i-s-bekap4-контрагенты",
+      "attrs": [
+        {
+          "name": "контрагент",
+          "caption": "Контрагент",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "КонтрагентыL",
+      "modelName": "i-i-s-bekap4-контрагенты",
+      "attrs": [
+        {
+          "name": "контрагент",
+          "caption": "Контрагент",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

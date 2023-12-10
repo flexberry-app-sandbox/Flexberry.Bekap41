@@ -1,0 +1,48 @@
+﻿{
+  "name": "IISBekap4Склады",
+  "modelName": "i-i-s-bekap4-склады",
+  "className": "Склады",
+  "nameSpace": "IIS.Bekap4",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "склад",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "заказПост",
+      "relatedTo": "i-i-s-bekap4-заказ-пост",
+      "inverse": "склады"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "СкладыE",
+      "modelName": "i-i-s-bekap4-склады",
+      "attrs": [
+        {
+          "name": "склад",
+          "caption": "Склад",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
