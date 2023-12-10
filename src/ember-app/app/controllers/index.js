@@ -22,18 +22,19 @@ export default Controller.extend({
             link: 'i-i-s-bekap4-заказ-пост-l',
             caption: i18n.t('forms.application.sitemap.bekap4.i-i-s-bekap4-заказ-пост-l.caption'),
             title: i18n.t('forms.application.sitemap.bekap4.i-i-s-bekap4-заказ-пост-l.title'),
-            icon: 'phone',
+            icon: 'edit',
             children: null
           }, {
             link: 'i-i-s-bekap4-отчет-о-закупках-l',
             caption: i18n.t('forms.application.sitemap.bekap4.i-i-s-bekap4-отчет-о-закупках-l.caption'),
             title: i18n.t('forms.application.sitemap.bekap4.i-i-s-bekap4-отчет-о-закупках-l.title'),
-            icon: 'address card',
+            icon: 'paperclip',
             children: null
           }, {
             link: 'i-i-s-bekap4-план-закупок-l',
             caption: i18n.t('forms.application.sitemap.bekap4.i-i-s-bekap4-план-закупок-l.caption'),
             title: i18n.t('forms.application.sitemap.bekap4.i-i-s-bekap4-план-закупок-l.title'),
+            icon: 'paperclip',
             children: null
           }]
         }
